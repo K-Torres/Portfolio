@@ -1,0 +1,3 @@
+.cards-container > .home-card::after {
+  opacity: 1;
+}

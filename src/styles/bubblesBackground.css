@@ -1,0 +1,22 @@
+span {
+  background-color: #4d585f;
+  box-shadow: 0 0 0 10px #4d585f44, 0 0 50px #4d585f, 0 0 100px #4d585f;
+  position: absolute !important;
+  left: var(--left-var);
+  animation: bubble 15s linear infinite;
+  animation-duration: var(--time-var);
+}
+
+.App > span:nth-child(even) {
+  background-color: #333539;
+  box-shadow: 0 0 0 10px #33353944, 0 0 50px #333539, 0 0 100px #333539;
+}
+
+@keyframes bubble {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
