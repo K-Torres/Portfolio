@@ -3,6 +3,7 @@ import HomeCard from "./components/homeCard";
 import BubblesBg from "./components/bubblesBackground";
 import About from "./components/about";
 import Projects from "./components/projects";
+import Experience from "./components/experience";
 import "./styles/App.css";
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
       </div> */}
       {/* <About></About> */}
       <Projects></Projects>
+      {/* <Experience></Experience> */}
     </div>
   )
 }

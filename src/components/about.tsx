@@ -10,9 +10,13 @@ const About = () => {
             <div className="text-white flex flex-col align-middle w-3/4">
                 <h1 className="text-5xl font-extralight mt-7 "> SOFTWARE DEVELOPER </h1>
                 <p className="underline-text w-auto self-center text-2xl font-medium mt-8 relative italic">About me</p>
-                <p className="my-6 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel dolorum repellendus rem laborum perspiciatis sed cum officiis aut nostrum expedita similique nisi debitis exercitationem excepturi autem quidem corrupti, suscipit error?</p>
-                <hr></hr>
-                <p className="my-4 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel dolorum repellendus rem laborum perspiciatis sed cum officiis aut nostrum expedita similique nisi debitis exercitationem excepturi autem quidem corrupti, suscipit error?</p>
+                <p className="my-6 text-justify">
+                    Software developer and React JS Lover. I have experience working with technologies such as: JavaScript, Typescript, React JS, Angular, JavaScript, Node, Python, Redux. I can do backend and frontend but I'm focused on frontend because I love creating user friendly interfaces and did I mention I love react?
+                </p>
+                <p className="my-1 text-justify">
+                    I like to learn, I'm always learning new things, and then testing that knowledge by doing projects.
+                </p>
+
             </div>
         </div>
 
