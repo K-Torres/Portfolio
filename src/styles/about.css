@@ -1,0 +1,91 @@
+.underline {
+  padding: 30px 0 8px;
+}
+
+.underline-text::before {
+  content: "";
+  position: absolute;
+  left: 20%;
+  bottom: 1%;
+  width: 100%;
+  height: 14px;
+  transform: skew(-12deg) translateX(-50%);
+  background: #4d585f;
+  z-index: -1;
+}
+
+.svg {
+  fill: #000000b0;
+  transition: 1s;
+  padding: 0 5px;
+  user-select: none;
+  display: inline;
+}
+
+.svg:hover {
+  transition: 0s;
+  fill: #f5f5f563;
+  text-shadow: 0 0 120px whitesmoke;
+}
+
+#row {
+  top: -50%;
+  transform: rotate(-30deg);
+  padding: 10px 0;
+}
+
+#row > div {
+  animation: animate 80s linear infinite;
+  animation-delay: -80s;
+}
+
+#row > div:nth-child(2) {
+  animation: animate2 80s linear infinite;
+  animation-delay: -40s;
+}
+
+#row:nth-child(even) > div {
+  animation: animate3 80s linear infinite;
+  animation-delay: -80s;
+}
+
+#row:nth-child(even) > div:nth-child(2) {
+  animation: animate4 80s linear infinite;
+  animation-delay: -40s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes animate3 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
