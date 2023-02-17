@@ -6,8 +6,8 @@ const BubblesBg = () => {
     }
 
     return <>
-        {Array.from(Array(50), (_, index) => {
-            return <span style={{ "--left-var": `${index * 2}%`, "--time-var": `${125 / randomNumber(5, 30)}s` } as React.CSSProperties} className="w-7 h-7 my-0 mx-2 rounded-full bg-" key={index}></span>
+        {Array.from(Array(51), (_, index) => {
+            return <span style={{ "--left-var": `${index * 2}%`, "--time-var": `${125 / randomNumber(5, 30)}s` } as React.CSSProperties} className="w-7 h-7 my-0 mx-2 rounded-full " key={index}></span>
         })}
     </>
 }

@@ -1,17 +1,17 @@
 import anime from "animejs/lib/anime.es"
+import { HomeCardI } from "../types/homeCard.type";
 import '../styles/homeCard.css'
 
 interface HomeCardProps {
-    showImage: boolean,
-    number: number
+    card: HomeCardI
 }
 
 const HomeCard = (props: HomeCardProps) => {
     const handleMouseEnterOrLeave = (mouseEntered: boolean) => {
         if (!mouseEntered) {
-            anime.remove(`${".hover-target" + props.number}`)
+            anime.remove(`${".hover-target" + props.card.id}`)
             anime({
-                targets: `${".hover-target" + props.number}`,
+                targets: `${".hover-target" + props.card.id}`,
                 translateY: 130,
                 duration: 500,
                 easing: 'easeInOutQuad',
@@ -19,9 +19,9 @@ const HomeCard = (props: HomeCardProps) => {
             });
             return
         }
-        anime.remove(`${".hover-target" + props.number}`)
+        anime.remove(`${".hover-target" + props.card.id}`)
         anime({
-            targets: `${".hover-target" + props.number}`,
+            targets: `${".hover-target" + props.card.id}`,
             translateY: -130,
             duration: 500,
             easing: 'easeInOutSine',
@@ -34,15 +34,15 @@ const HomeCard = (props: HomeCardProps) => {
          relative hover:cursor-pointer hover:before:opacity-100">
         <div className="card-content rounded-2xl py-4 xl:py-0 xl:absolute inset-[1px] bg-[#171717] border-inherit m-[2px] z-20">
             <div className="flex flex-wrap justify-center">
-                <div className="w-1/3 lg:w-1/4 xl:w-1/3 px-4">
-                    <img src="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/team-2-800x800.jpg"
-                        alt="..." className="shadow rounded-full max-w-full h-auto align-middle border-none mt-8" />
+                <div className="w-2/3 px-4">
+                    <img src={`/src/assets/images/${props.card.imgName}.jpg`}
+                        alt="..." className="image shadow max-w-full rounded-lg grayscale h-auto align-middle border-none mt-4" />
                 </div>
             </div>
 
-            <div className="px-8 lg:px-10 mt-2 xl:mt-12 flex flex-col xl:relative">
-                <p className="text-white text-lg md:text-4xl lg:text-2xl font-bold "> Who am I?</p>
-                <p className={`text-muted font-medium mt-2 text-sm md:text-lg xl:absolute xl:-bottom-56 xl:opacity-0 ${'hover-target' + props.number}`}> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <div className="px-8 lg:px-10 mt-2 xl:mt-6 flex flex-col xl:relative">
+                <p className="text-white text-lg md:text-4xl lg:text-2xl font-bold "> {props.card.tittle}</p>
+                <p className={`text-muted font-medium mt-2 text-sm md:text-lg xl:absolute xl:-bottom-52 xl:opacity-0 ${'hover-target' + props.card.id}`}> {props.card.subTittle}</p>
             </div>
         </div>
     </div>

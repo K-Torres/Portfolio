@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "tittle": "About",
+        "subTittle": "I'm Johan Torres, I love cooking, videogames, calisthenics, and yes, you guessed it, I love coding. 😊",
+        "imgName": "About"
+    },
+    {
+        "id": 2,
+        "tittle": "Profesional profile",
+        "subTittle": "Here I'll show you my experience and certificates. Simply click here. 👆",
+        "imgName": "Profesional profile"
+    },
+    {
+        "id": 3,
+        "tittle": "Projects",
+        "subTittle": "Some of the projects I work on in my spare time. Do you want to see them? 👀",
+        "imgName": "Projects"
+    },
+    {
+        "id": 4,
+        "tittle": "Contact",
+        "subTittle": "If you want to tell me something. I'll be waiting for your mail. 📧",
+        "imgName": "Contact"
+    }
+]

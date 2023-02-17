@@ -70,9 +70,6 @@ const Carousel = () => {
                 ))}
 
             </div>
-
-
-
             <button
                 className="absolute top-1/2 -translate-y-1/2 left-0 cursor-pointer"
                 onClick={prevSlide}

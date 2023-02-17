@@ -1,3 +1,7 @@
+.home-card:hover > .card-content > div > div > .image{
+  filter: grayscale(0.5);
+}
+
 .home-card::before {
   background: radial-gradient(
     800px circle at var(--mouse-x) var(--mouse-y),
