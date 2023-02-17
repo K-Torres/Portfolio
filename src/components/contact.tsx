@@ -2,8 +2,8 @@ import '../styles/contact.css'
 
 const Contact = () => {
     return (
-        <div className=" relative w-full h-[60vh] flex flex-col justify-center min-h-screen overflow-hidden z-50 ">
-            <div className=" bg-[#1d1d1d] form-container relative flex justify-center items-center z-50 w-1/4 h-[60vh] m-auto rounded-md overflow-hidden">
+        <div className=" relative w-full h-[60vh] flex flex-col justify-center min-h-screen overflow-hidden z-20 ">
+            <div className=" bg-[#1d1d1d] form-container relative flex justify-center items-center z-10 w-1/4 h-[60vh] m-auto rounded-md overflow-hidden">
                 <div className='h-[calc(100%-4px)] w-[calc(100%-4px)] bg-[#141414] p-6'>
                     <h1 className="text-3xl font-semibold text-center text-white uppercase">
                         Get in touch

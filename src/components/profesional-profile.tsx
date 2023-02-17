@@ -1,6 +1,7 @@
-import "../styles/experience.css";
+import GoBackButton from "./goBackButton";
+import "../styles/profesional-profile.css";
 
-const Experience = () => {
+const ProfesionalProfile = () => {
     return <div className="w-1/2 z-10 max-h-screen scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300">
         <div className="w-full flex justify-center gap-8 ">
             <div className="text-white flex flex-col align-middle w-3/4">
@@ -84,8 +85,7 @@ const Experience = () => {
                 </p>
             </div>
         </div>
-
     </div>
 }
 
-export default Experience
+export default ProfesionalProfile

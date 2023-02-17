@@ -1,12 +1,18 @@
 import anime from "animejs/lib/anime.es"
-import { HomeCardI } from "../types/homeCard.type";
+import { IMenuCard } from "../types/menuCard.type";
+import { Page } from "../types/page.type";
+import { PageNameContext } from "../context/page.context";
 import '../styles/homeCard.css'
+import { useContext } from "react";
 
-interface HomeCardProps {
-    card: HomeCardI
+interface MenuCardProps {
+    card: IMenuCard
 }
 
-const HomeCard = (props: HomeCardProps) => {
+const MenuCard = (props: MenuCardProps) => {
+
+    const { setPage } = useContext(PageNameContext);
+
     const handleMouseEnterOrLeave = (mouseEntered: boolean) => {
         if (!mouseEntered) {
             anime.remove(`${".hover-target" + props.card.id}`)
@@ -29,7 +35,11 @@ const HomeCard = (props: HomeCardProps) => {
         });
     }
 
-    return <div onMouseLeave={() => handleMouseEnterOrLeave(false)} onMouseEnter={() => handleMouseEnterOrLeave(true)}
+    const handlePageChange = () => {
+        setPage(props.card.tittle as Page)
+    }
+
+    return <div onClick={handlePageChange} onMouseLeave={() => handleMouseEnterOrLeave(false)} onMouseEnter={() => handleMouseEnterOrLeave(true)}
         className="home-card bg-[rgba(255,255,255,0.1)] w-10/12 lg:w-3/4 xl:w-[490px] h-full xl:h-[40vh] rounded-2xl before:z-30
          relative hover:cursor-pointer hover:before:opacity-100">
         <div className="card-content rounded-2xl py-4 xl:py-0 xl:absolute inset-[1px] bg-[#171717] border-inherit m-[2px] z-20">
@@ -48,4 +58,4 @@ const HomeCard = (props: HomeCardProps) => {
     </div>
 }
 
-export default HomeCard
+export default MenuCard

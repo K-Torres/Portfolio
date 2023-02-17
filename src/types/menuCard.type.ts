@@ -1,4 +1,4 @@
-export interface HomeCardI {
+export interface IMenuCard {
     id: number,
     tittle: string,
     subTittle: string,

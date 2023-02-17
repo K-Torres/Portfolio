@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
-import HomeCard from "../components/homeCard";
+import MenuCard from "./menuCard";
 import MenuItems from "../data/menuInfo.json";
 import "../styles/menu.css";
-import { HomeCardI } from "../types/homeCard.type";
+import { IMenuCard } from "../types/menuCard.type";
 
 function App() {
 
@@ -12,6 +12,7 @@ function App() {
     }, [])
 
     const handleOnMouseMove = (e: MouseEvent) => {
+        console.log("mouse moved!")
         for (const card of document.getElementsByClassName("home-card")) {
             const rect = card.getBoundingClientRect(),
                 x = e.clientX - rect.left,
@@ -25,8 +26,8 @@ function App() {
     return (
         <div ref={cardsContainer} className='cards-container w-[calc(100vw)] xl:w-auto grid grid-cols-1 xl:grid-cols-2 gap-4 h-[95vh] xl:h-[82vh] m-auto justify-items-center overflow-auto xl:overflow-hidden'>
             {
-                MenuItems.map((item: HomeCardI) => {
-                    return <HomeCard card={item} key={item.id}></HomeCard>
+                MenuItems.map((item: IMenuCard) => {
+                    return <MenuCard card={item} key={item.id}></MenuCard>
                 })
             }
         </div>
