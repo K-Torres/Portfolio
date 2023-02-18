@@ -1,5 +1,4 @@
 import { useState } from "react";
-import GoBackButton from "./goBackButton";
 
 const Projects = () => {
     return (
@@ -35,7 +34,7 @@ const Carousel = () => {
     };
 
     return (
-        <div className="relative overflow-hidden w-2/4 rounded-3xl">
+        <div className="relative overflow-hidden w-[90vw] lg:w-2/4 rounded-3xl">
             <div
                 className="flex w-full rounded-3xl"
                 style={{
@@ -49,7 +48,7 @@ const Carousel = () => {
                             key={index}
                             className="bg-cover bg-no-repeat w-full h-[75vh] flex-shrink-0 cursor-pointer z-10 opacity-100 hover:opacity-40 transition duration-300 ease-in-out"
                             style={{ backgroundColor: "rgba(251, 251, 251, 0.2)" }}
-                            src="/src/assets/images/project1.png"
+                            src="/src/assets/images/project12.png"
                         />
                         <div className={`absolute w-full top-1/2 -translate-y-1/2 cursor-pointer`} style={{ right: `-${(index) * 100}%` }}>
                             <div className="w-3/4 m-auto">

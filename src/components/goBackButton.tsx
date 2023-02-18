@@ -12,7 +12,7 @@ const GoBackButton = () => {
 
     if (page === "Menu") return
 
-    return <button onClick={handlePageChange} className="z-50 flex flex-row absolute top-20 left-2 bg-transparent py-1 px-4 border-2 
+    return <button onClick={handlePageChange} className="z-50 flex flex-row absolute bottom-16 -right-8 xl:top-20 xl:left-2 xl:bottom-auto xl:right-auto bg-transparent py-1 px-4 border-2 
     rounded-full border-white gap-2 items-center rotate-[271deg] transition-all duration-1000 ease-out hover:bg-gray-600 hover:scale-105">
         <p className="text-white font-semibold">Go back</p>
         <div className="w-4 h-4 fill-white">

@@ -1,13 +1,12 @@
-import GoBackButton from "./goBackButton";
 import "../styles/profesional-profile.css";
 
 const ProfesionalProfile = () => {
-    return <div className="w-1/2 z-10 max-h-screen scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300">
+    return <div className="w-full xl:w-1/2 z-10 max-h-screen scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-300">
         <div className="w-full flex justify-center gap-8 ">
-            <div className="text-white flex flex-col align-middle w-3/4">
-                <h1 className="text-5xl font-extralight mt-7 text-center"> SOFTWARE DEVELOPER </h1>
+            <div className="text-white flex flex-col align-middle w-3/4 text-md lg:text-lg">
+                <h1 className="text-2xl xl:text-3xl 2xl:text-5xl font-extralight mt-4 2xl:mt-1 text-center"> SOFTWARE DEVELOPER </h1>
                 <p className="underline-text w-auto self-center text-2xl font-medium mt-8 relative italic">Experience</p>
-                <div className="flex justify-between mt-6 text-muted">
+                <div className="flex flex-col md:flex-row justify-between mt-6 text-muted">
                     <p className="my-3 flex gap-1 "><p className="font-semibold text-white">Full-Stack Developer </p> - Double V Partners</p>
                     <p>Sep 2021 – Present</p>
                 </div>
@@ -32,7 +31,7 @@ const ProfesionalProfile = () => {
                     </li>
                 </ul>
                 <hr></hr>
-                <div className="flex justify-between mt-6 text-muted">
+                <div className="flex flex-col md:flex-row justify-between mt-6 text-muted">
                     <p className="my-3 flex gap-1 "><p className="font-semibold text-white">Frontend Developer </p> - Mentor360</p>
                     <p>Sep 2021 – Present</p>
                 </div>
@@ -49,7 +48,7 @@ const ProfesionalProfile = () => {
                     </li>
                 </ul>
                 <hr></hr>
-                <div className="flex justify-between mt-6 text-muted">
+                <div className="flex flex-col md:flex-row justify-between mt-6 text-muted">
                     <p className="my-3 flex gap-1 "><p className="font-semibold text-white">Frontend Developer </p> -  Be on Dev </p>
                     <p>Sep 2021 – Present</p>
                 </div>

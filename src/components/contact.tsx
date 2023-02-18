@@ -2,17 +2,18 @@ import '../styles/contact.css'
 
 const Contact = () => {
     return (
-        <div className=" relative w-full h-[60vh] flex flex-col justify-center min-h-screen overflow-hidden z-20 ">
-            <div className=" bg-[#1d1d1d] form-container relative flex justify-center items-center z-10 w-1/4 h-[60vh] m-auto rounded-md overflow-hidden">
-                <div className='h-[calc(100%-4px)] w-[calc(100%-4px)] bg-[#141414] p-6'>
+        <div className="relative w-full h-[60vh] flex flex-col justify-center min-h-screen overflow-hidden z-20 ">
+            <div className=" bg-[#1d1d1d] form-container relative flex justify-center items-center z-10
+             w-[90vw] md:w-2/3 lg:w-1/2 xl:w-1/4 xl:h-[60vh] m-auto rounded-md overflow-hidden ">
+                <div className='h-[calc(100%-4px)] w-[calc(100%-4px)] bg-[#141414] p-6 py-10 md:py-16 xl:py-6'>
                     <h1 className="text-3xl font-semibold text-center text-white uppercase">
                         Get in touch
                     </h1>
-                    <form className="mt-6">
+                    <form className="mt-6 text-md">
                         <div className="mb-2">
                             <label
                                 htmlFor="name"
-                                className="block text-sm font-semibold text-muted"
+                                className="block font-semibold text-muted"
                             >
                                 Name
                             </label>
@@ -24,7 +25,7 @@ const Contact = () => {
                         <div className="mb-2">
                             <label
                                 htmlFor="email"
-                                className="block text-sm font-semibold text-muted"
+                                className="block font-semibold text-muted"
                             >
                                 Email
                             </label>
@@ -36,7 +37,7 @@ const Contact = () => {
                         <div className="mb-2">
                             <label
                                 htmlFor="subject"
-                                className="block text-sm font-semibold text-muted"
+                                className="block font-semibold text-muted"
                             >
                                 Subject
                             </label>
@@ -48,7 +49,7 @@ const Contact = () => {
                         <div className="mb-2">
                             <label
                                 htmlFor="detail"
-                                className="block text-sm font-semibold text-muted"
+                                className="block font-semibold text-muted"
                             >
                                 More detail
                             </label>
