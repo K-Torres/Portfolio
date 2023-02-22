@@ -21,7 +21,7 @@ const MenuCard = (props: MenuCardProps) => {
                 translateY: 130,
                 duration: 500,
                 easing: 'easeInOutQuad',
-                opacity: '0'
+                opacity: '0',
             });
             return
         }
