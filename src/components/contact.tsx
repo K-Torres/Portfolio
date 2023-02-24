@@ -1,6 +1,25 @@
+import anime from "animejs/lib/anime.es"
+import { useState } from "react";
 import '../styles/contact.css'
 
 const Contact = () => {
+
+    const [submit, setSubmit] = useState<"Submit" | "Submitted ✔" | "">("Submit")
+
+    anime({
+        targets: ".submit",
+        duration: 1000,
+        easing: 'linear',
+        height: "100%",
+        background: "rgb(22 163 74)",
+        begin: function (anim) {
+            anim.completed && setSubmit("")
+        },
+        complete: function (anim) {
+            anim.completed && setSubmit("Submitted ✔")
+        }
+    });
+
     return (
         <div className="relative w-full h-[60vh] flex flex-col justify-center min-h-screen overflow-hidden z-20 ">
             <div className=" bg-[#1d1d1d] form-container relative flex justify-center items-center z-10
@@ -58,9 +77,9 @@ const Contact = () => {
                                 className="block w-full px-4 py-2 mt-2 text-muted bg-white border rounded-md focus:border-gray-400 focus:ring-gray-300 focus:outline-none focus:ring focus:ring-opacity-40"
                             />
                         </div>
-                        <div className="mt-6">
-                            <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#4d585f] rounded-md hover:bg-[#4d585fd4] focus:outline-none focus:bg-[#4d585fd4]">
-                                Send message
+                        <div className="mt-6 h-10 flex content-center">
+                            <button disabled={submit === "Submitted ✔"} className="submit w-full h-10 tracking-wide text-white transition-colors duration-200 transform bg-[#4d585f] rounded-md hover:bg-[#4d585fd4] focus:outline-none focus:bg-[#4d585fd4]">
+                                {submit}
                             </button>
                         </div>
                     </form>

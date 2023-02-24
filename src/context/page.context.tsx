@@ -13,7 +13,7 @@ interface Props {
 }
 
 export const PageNameProvider: React.FC<Props> = ({ children }) => {
-    const [page, setPage] = useState<Page>("Menu")
+    const [page, setPage] = useState<Page>("Contact")
 
     return (
         <PageNameContext.Provider value={{ page: page, setPage: setPage }}>
