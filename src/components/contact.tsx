@@ -6,15 +6,14 @@ import '../styles/contact.css'
 
 const Contact = () => {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm<UserForm>();
+    const { register, handleSubmit, formState: { errors } } = useForm<UserForm>();
     const [submit, setSubmit] = useState<"Submit" | "Submitted ✔" | "">("Submit")
 
     const onSubmit: SubmitHandler<UserForm> = (data) => {
         fetch("https://emailsender-h5bl.onrender.com/email", {
             method: "POST",
             body: JSON.stringify(data)
-        }).then((res) => {
-            console.log(res)
+        }).then(() => {
             anime({
                 targets: ".submit",
                 duration: 1000,
@@ -37,7 +36,7 @@ const Contact = () => {
              w-[90vw] md:w-2/3 lg:w-1/2 xl:w-1/4 xl:h-[60vh] m-auto rounded-md overflow-hidden ">
                 <div className='h-[calc(100%-4px)] w-[calc(100%-4px)] bg-[#141414] p-6 py-10 md:py-16 xl:py-6'>
                     <h1 className="text-3xl font-semibold text-center text-white uppercase">
-                        Get in touch
+                        Contact me
                     </h1>
                     <form className="mt-6 text-md" onSubmit={handleSubmit(onSubmit)}>
                         <div className="mb-2">

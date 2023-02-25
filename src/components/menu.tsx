@@ -12,7 +12,6 @@ function App() {
     }, [])
 
     const handleOnMouseMove = (e: MouseEvent) => {
-        console.log("mouse moved!")
         for (const card of document.getElementsByClassName("home-card")) {
             const rect = card.getBoundingClientRect(),
                 x = e.clientX - rect.left,

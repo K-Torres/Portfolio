@@ -52,7 +52,7 @@ const MenuCard = (props: MenuCardProps) => {
 
             <div className="px-8 lg:px-10 mt-2 xl:mt-6 flex flex-col xl:relative">
                 <p className="text-white text-lg md:text-4xl lg:text-2xl font-bold "> {props.card.tittle}</p>
-                <p className={`text-muted font-medium mt-2 text-sm md:text-lg xl:absolute xl:-bottom-52 xl:opacity-0 ${'hover-target' + props.card.id}`}> {props.card.subTittle}</p>
+                <p className={`text-muted font-medium mt-2 text-sm md:text-lg xl:absolute xl:-bottom-56 xl:opacity-0 ${'hover-target' + props.card.id}`}> {props.card.subTittle}</p>
             </div>
         </div>
     </div>
