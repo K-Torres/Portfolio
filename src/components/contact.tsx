@@ -7,10 +7,13 @@ import '../styles/contact.css'
 const Contact = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm<UserForm>();
-    const [submit, setSubmit] = useState<"Submit" | "Submitted ✔" | "">("Submit")
+    const [submit, setSubmit] = useState<"Submit" | "Submitted ✔" | "Unexpected error ❌" | "">("Submit")
 
     const onSubmit: SubmitHandler<UserForm> = (data) => {
         fetch("https://emailsender-h5bl.onrender.com/email", {
+            headers: {
+                "Content-Type": "application/json",
+            },
             method: "POST",
             body: JSON.stringify(data)
         }).then(() => {
@@ -25,6 +28,20 @@ const Contact = () => {
                 },
                 complete: function (anim) {
                     anim.completed && setSubmit("Submitted ✔")
+                }
+            });
+        }).catch(() => {
+            anime({
+                targets: ".submit",
+                duration: 1000,
+                easing: 'linear',
+                height: "100%",
+                background: "rgb(220, 20, 60)",
+                begin: function (anim) {
+                    anim.completed && setSubmit("")
+                },
+                complete: function (anim) {
+                    anim.completed && setSubmit("Unexpected error ❌")
                 }
             });
         })

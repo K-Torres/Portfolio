@@ -3,13 +3,19 @@ import { IMenuCard } from "../types/menuCard.type";
 import { Page } from "../types/page.type";
 import { PageNameContext } from "../context/page.context";
 import '../styles/homeCard.css'
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 interface MenuCardProps {
     card: IMenuCard
 }
 
 const MenuCard = (props: MenuCardProps) => {
+
+    const [Image, setImage] = useState("")
+
+    import(`../assets/images/${props.card.imgName}.jpg`).then((res) => {
+        setImage(res.default)
+    })
 
     const { setPage } = useContext(PageNameContext);
 
@@ -45,7 +51,7 @@ const MenuCard = (props: MenuCardProps) => {
         <div className="card-content rounded-2xl py-4 xl:py-0 xl:absolute inset-[1px] bg-[#171717] border-inherit m-[2px] z-20">
             <div className="flex flex-wrap justify-center">
                 <div className="w-2/3 px-4">
-                    <img src={`/src/assets/images/${props.card.imgName}.jpg`}
+                    <img src={Image}
                         alt="..." className="image shadow max-w-full rounded-lg grayscale h-auto align-middle border-none mt-4" />
                 </div>
             </div>
