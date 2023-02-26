@@ -1,4 +1,4 @@
-.home-card:hover > .card-content > div > div > .image{
+.home-card:hover > .card-content > div > div > picture > .image{
   filter: grayscale(0.5);
 }
 

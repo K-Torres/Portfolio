@@ -9,12 +9,25 @@ interface MenuCardProps {
     card: IMenuCard
 }
 
+interface ImagePath {
+    image_path: string,
+    bigger_image_path: string
+}
+
 const MenuCard = (props: MenuCardProps) => {
 
-    const [Image, setImage] = useState("")
+    const [imagesPath, setImagesPath] = useState<ImagePath>({} as ImagePath)
 
-    import(`../assets/images/${props.card.imgName}.jpg`).then((res) => {
-        setImage(res.default)
+    import(`../assets/images/${props.card.imgName}.webp`).then((res) => {
+        setImagesPath((paths) => {
+            return { ...paths, imagesPath: res.default }
+        })
+    })
+
+    import(`../assets/images/${props.card.biggerImgName}.webp`).then((res) => {
+        setImagesPath((paths) => {
+            return { ...paths, bigger_image_path: res.default }
+        })
     })
 
     const { setPage } = useContext(PageNameContext);
@@ -46,22 +59,27 @@ const MenuCard = (props: MenuCardProps) => {
     }
 
     return <div onClick={handlePageChange} onMouseLeave={() => handleMouseEnterOrLeave(false)} onMouseEnter={() => handleMouseEnterOrLeave(true)}
-        className="home-card bg-[rgba(255,255,255,0.1)] w-10/12 lg:w-3/4 xl:w-[490px] h-full xl:h-[40vh] rounded-2xl before:z-30
+        className="home-card bg-[rgba(255,255,255,0.1)] w-10/12 lg:w-3/4 xl:w-[490px] h-full xl:h-[46vh] 2xl:h-[38vh] rounded-2xl before:z-30
          relative hover:cursor-pointer hover:before:opacity-100">
         <div className="card-content rounded-2xl py-4 xl:py-0 xl:absolute inset-[1px] bg-[#171717] border-inherit m-[2px] z-20">
             <div className="flex flex-wrap justify-center">
                 <div className="w-2/3 px-4">
-                    <img src={Image}
-                        alt="..." className="image shadow max-w-full rounded-lg grayscale h-auto align-middle border-none mt-4" />
+                    <picture>
+                        <source media="(min-width:650px)" srcSet={imagesPath.bigger_image_path} />
+                        <img src={imagesPath.image_path}
+                            alt={props.card.tittle} className="image shadow max-w-full rounded-lg grayscale h-auto align-middle border-none mt-4" />
+                    </picture>
                 </div>
             </div>
 
-            <div className="px-8 lg:px-10 mt-2 xl:mt-6 flex flex-col xl:relative">
-                <p className="text-white text-lg md:text-4xl lg:text-2xl font-bold "> {props.card.tittle}</p>
-                <p className={`text-muted font-medium mt-2 text-sm md:text-lg xl:absolute xl:-bottom-56 xl:opacity-0 ${'hover-target' + props.card.id}`}> {props.card.subTittle}</p>
+            <div className={`px-8 lg:px-10 mt-2 xl:mt-2 2xl:mt-3 flex flex-col xl:relative ${props.card.id === 1 ? "pb-6" : ""} `}>
+                <p className="text-white text-lg md:text-4xl lg:text-xl font-bold "> {props.card.tittle}</p>
+                <p className={`text-muted font-medium mt-2 text-sm md:text-lg hidden xl:block xl:absolute xl:-bottom-48
+                   xl:opacity-0 ${'hover-target' + props.card.id}`}> {props.card.subTittle}</p>
+                <p className={`text-muted font-medium mt-1 text-sm md:text-lg xl:hidden`}> {props.card.subTittle}</p>
             </div>
         </div>
-    </div>
+    </div>  
 }
 
 export default MenuCard

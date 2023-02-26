@@ -24,7 +24,7 @@ function App() {
 
     return (
         <div ref={cardsContainer} className='cards-container w-[calc(100vw)] xl:w-auto grid grid-cols-1 xl:grid-cols-2
-         gap-4 h-[95vh] lg:h-[90vh] xl:h-[82vh] m-auto justify-items-center overflow-auto xl:overflow-hidden'>
+         gap-4 h-[95vh] lg:h-[90vh] xl:h-[95vh] 2xl:h-[82vh] m-auto justify-items-center overflow-auto xl:overflow-hidden'>
             {
                 MenuItems.map((item: IMenuCard) => {
                     return <MenuCard card={item} key={item.id}></MenuCard>

@@ -3,5 +3,5 @@ export interface IMenuCard {
     tittle: string,
     subTittle: string,
     imgName: string,
-    url: string,
+    biggerImgName: string
 }
