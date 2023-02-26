@@ -9,27 +9,9 @@ interface MenuCardProps {
     card: IMenuCard
 }
 
-interface ImagePath {
-    image_path: string,
-    bigger_image_path: string
-}
-
 const MenuCard = (props: MenuCardProps) => {
 
-    const [imagesPath, setImagesPath] = useState<ImagePath>({} as ImagePath)
-
-    import(`../assets/images/${props.card.imgName}.webp`).then((res) => {
-        setImagesPath((paths) => {
-            return { ...paths, imagesPath: res.default }
-        })
-    })
-
-    import(`../assets/images/${props.card.biggerImgName}.webp`).then((res) => {
-        setImagesPath((paths) => {
-            return { ...paths, bigger_image_path: res.default }
-        })
-    })
-
+    console.log(props)
     const { setPage } = useContext(PageNameContext);
 
     const handleMouseEnterOrLeave = (mouseEntered: boolean) => {
@@ -65,9 +47,9 @@ const MenuCard = (props: MenuCardProps) => {
             <div className="flex flex-wrap justify-center">
                 <div className="w-2/3 px-4">
                     <picture>
-                        <source media="(min-width:650px)" srcSet={imagesPath.bigger_image_path} />
-                        <img src={imagesPath.image_path}
-                            alt={props.card.tittle} className="image shadow max-w-full rounded-lg grayscale h-auto align-middle border-none mt-4" />
+                        <source media="(min-width:650px)" srcSet={props.card.biggerimgPath} />
+                        <img src={props.card.imgPath}
+                            alt={props.card.tittle} className="image shadow w-full rounded-lg grayscale h-auto align-middle border-none mt-4" />
                     </picture>
                 </div>
             </div>

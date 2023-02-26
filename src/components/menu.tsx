@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import MenuCard from "./menuCard";
-import MenuItems from "../data/menuInfo.json";
+import { MENU_CARDS } from "../constans/menuCards";
 import "../styles/menu.css";
 import { IMenuCard } from "../types/menuCard.type";
 
@@ -26,7 +26,7 @@ function App() {
         <div ref={cardsContainer} className='cards-container w-[calc(100vw)] xl:w-auto grid grid-cols-1 xl:grid-cols-2
          gap-4 h-[95vh] lg:h-[90vh] xl:h-[95vh] 2xl:h-[82vh] m-auto justify-items-center overflow-auto xl:overflow-hidden'>
             {
-                MenuItems.map((item: IMenuCard) => {
+                MENU_CARDS.map((item: IMenuCard) => {
                     return <MenuCard card={item} key={item.id}></MenuCard>
                 })
             }
