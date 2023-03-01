@@ -1,11 +1,11 @@
-import AboutPath from "../assets/images/about.webp";
-import AboutBiggerPath from "../assets/images/about_640.webp";
-import ContactPath from "../assets/images/contact.webp";
-import ContactBiggerPath from "../assets/images/contact_640.webp";
-import ProfesionalPath from "../assets/images/profesional-profile.webp";
-import ProfesionalBiggerPath from "../assets/images/profesional-profile_640.webp";
-import ProjectsPath from "../assets/images/projects.webp";
-import ProjectsBiggerPath from "../assets/images/projects_640.webp";
+import AboutPath from "../assets/images/menuCards/about.webp";
+import AboutBiggerPath from "../assets/images/menuCards/about_640.webp";
+import ContactPath from "../assets/images/menuCards/contact.webp";
+import ContactBiggerPath from "../assets/images/menuCards/contact_640.webp";
+import ProfesionalPath from "../assets/images/menuCards/profesional-profile.webp";
+import ProfesionalBiggerPath from "../assets/images/menuCards/profesional-profile_640.webp";
+import ProjectsPath from "../assets/images/menuCards/projects.webp";
+import ProjectsBiggerPath from "../assets/images/menuCards/projects_640.webp";
 
 export const MENU_CARDS = [
     {
@@ -18,7 +18,7 @@ export const MENU_CARDS = [
     {
         id: 2,
         tittle: "Profesional profile",
-        subTittle: "Here I'll show you my experience and certificates. Simply click here. 👆",
+        subTittle: "Here I'll show you my work experience and certificates. 📜",
         imgPath: ContactPath,
         biggerimgPath: ContactBiggerPath
     },

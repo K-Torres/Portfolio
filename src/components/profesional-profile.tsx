@@ -8,7 +8,7 @@ const ProfesionalProfile = () => {
                 <p className="underline-text w-auto self-center text-2xl font-medium mt-8 relative italic">Experience</p>
                 <div className="flex flex-col md:flex-row justify-between mt-6 text-muted">
                     <p className="my-3 flex gap-1 "><p className="font-semibold text-white">Full-Stack Developer </p> - Double V Partners</p>
-                    <p>Sep 2021 – Present</p>
+                    <p>Sept 2021 – Present</p>
                 </div>
 
                 <ul className="list-disc text-muted mx-5 my-3">
@@ -33,7 +33,7 @@ const ProfesionalProfile = () => {
                 <hr></hr>
                 <div className="flex flex-col md:flex-row justify-between mt-6 text-muted">
                     <p className="my-3 flex gap-1 "><p className="font-semibold text-white">Frontend Developer </p> - Mentor360</p>
-                    <p>Sep 2021 – Present</p>
+                    <p>Sept 2021 – Nov 2021</p>
                 </div>
 
                 <ul className="list-disc text-muted mx-5 my-3">
@@ -49,8 +49,8 @@ const ProfesionalProfile = () => {
                 </ul>
                 <hr></hr>
                 <div className="flex flex-col md:flex-row justify-between mt-6 text-muted">
-                    <p className="my-3 flex gap-1 "><p className="font-semibold text-white">Frontend Developer </p> -  Be on Dev </p>
-                    <p>Sep 2021 – Present</p>
+                    <p className="my-3 flex gap-1 "><p className="font-semibold text-white">Frontend Developer </p> -  Be on Dev - contract</p>
+                    <p>July 2021 – August 2021</p>
                 </div>
 
                 <ul className="list-disc text-muted mx-5 my-3">
