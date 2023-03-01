@@ -10,8 +10,6 @@ interface MenuCardProps {
 }
 
 const MenuCard = (props: MenuCardProps) => {
-
-    console.log(props)
     const { setPage } = useContext(PageNameContext);
 
     const handleMouseEnterOrLeave = (mouseEntered: boolean) => {
