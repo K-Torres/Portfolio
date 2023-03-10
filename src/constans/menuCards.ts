@@ -19,21 +19,21 @@ export const MENU_CARDS = [
         id: 2,
         tittle: "Profesional profile",
         subTittle: "Here I'll show you my work experience and certificates. 📜",
-        imgPath: ContactPath,
-        biggerimgPath: ContactBiggerPath
+        imgPath: ProfesionalPath,
+        biggerimgPath: ProfesionalBiggerPath
     },
     {
         id: 3,
         tittle: "Projects",
         subTittle: "Some of the projects I work on in my spare time. Do you want to see them? 👀",
-        imgPath: ProfesionalPath,
-        biggerimgPath: ProfesionalBiggerPath
+        imgPath: ProjectsPath ,
+        biggerimgPath: ProjectsBiggerPath
     },
     {
         id: 4,
         tittle: "Contact",
         subTittle: "If you want to tell me something. I'll be waiting for your mail. 📧",
-        imgPath: ProjectsPath,
-        biggerimgPath: ProjectsBiggerPath
+        imgPath: ContactPath,
+        biggerimgPath: ContactBiggerPath
     }
 ]

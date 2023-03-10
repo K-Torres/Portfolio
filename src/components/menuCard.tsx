@@ -43,7 +43,7 @@ const MenuCard = (props: MenuCardProps) => {
          relative hover:cursor-pointer hover:before:opacity-100">
         <div className="card-content rounded-2xl py-4 xl:py-0 xl:absolute inset-[1px] bg-[#171717] border-inherit m-[2px] z-20">
             <div className="flex flex-wrap justify-center">
-                <div className="w-2/3 px-4">
+                <div className="w-2/3 xl:w-[63%] 2xl:w-4/5 3xl:w-2/3 px-4">
                     <picture>
                         <source media="(min-width:650px)" srcSet={props.card.biggerimgPath} />
                         <img src={props.card.imgPath}
@@ -54,9 +54,9 @@ const MenuCard = (props: MenuCardProps) => {
 
             <div className={`px-8 lg:px-10 mt-2 xl:mt-2 2xl:mt-3 flex flex-col xl:relative ${props.card.id === 1 ? "pb-6" : ""} `}>
                 <p className="text-white text-lg md:text-4xl lg:text-xl font-bold "> {props.card.tittle}</p>
-                <p className={`text-muted font-medium mt-2 text-sm md:text-lg hidden xl:block xl:absolute xl:-bottom-48
+                <p className={`text-muted font-medium mt-2 text-sm md:text-lg hidden xl:text-base xl:block xl:absolute ${props.card.id === 1 ? "xl:-bottom-40" : "xl:-bottom-44"} 2xl:-bottom-48 3xl:text-lg
                    xl:opacity-0 ${'hover-target' + props.card.id}`}> {props.card.subTittle}</p>
-                <p className={`text-muted font-medium mt-1 text-sm md:text-lg xl:hidden`}> {props.card.subTittle}</p>
+                <p className={`text-muted font-medium mt-1 text-sm md:text-lg xl:hidden `}> {props.card.subTittle}</p>
             </div>
         </div>
     </div>  
