@@ -6,7 +6,7 @@ import AnimejsEffectBiggerPath from "../assets/images/projects/animejsEffect_130
 export const PROJECTS = [
     {
         id: 1,
-        name: "Google and Github Firebase authentication web",
+        name: "Google and Github login web using Firebase auth",
         description: "",
         gitbubRepoUrl: "https://github.com/K-Torres/firebase-login",
         webUrl: "https://firebase-login-aph0.onrender.com",
